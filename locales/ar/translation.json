@@ -1,0 +1,9 @@
+{
+  "success": "تمت بنجاح",
+  "failed": "لم تمم بماج",
+  "orderCreated": "تم اضافه الطلب بنجاح",
+  "notFound": "غير موجود",
+  "invalid_id": "الرقم غير صحيح",
+  "Image_required": "الصوره مطلوبه",
+  "invalidPhoneNumber": "رقم الجوال غير صحيح"
+}

@@ -1,0 +1,9 @@
+{
+  "success": "success",
+  "failed": "failed",
+  "orderCreated": "Order created successfully",
+  "notFound": "not Found",
+  "invalid_id": "Invalid id",
+  "Image_required": "Image required",
+  "invalidPhoneNumber":"Invalid Phone number"
+}
