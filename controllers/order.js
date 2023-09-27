@@ -8,7 +8,7 @@ const { validatePhone } = require("../helpers/phoneNumber");
 module.exports = {
   async createOrder(req, res) {
     const country = req.headers["country"]; // get country from headers
-        if (!validatePhone(req.body.phone, country)) {
+    if (!validatePhone(req.body.phone, country)) {
       // check if phone number is valid
       return res
         .status(Http.StatusCodes.BAD_REQUEST)
@@ -94,7 +94,7 @@ module.exports = {
       .then((result) => {
         if (result.length === 0) {
           // if order not found
-          return res.status(Http.StatusCodes.NOT_FOUND).json(req.t("notFound")); // return not found
+          return res.status(Http.StatusCodes.OK).json({order:result}); // return empty
         }
 
         const allOrders = filterOrders(result, lang); // filter order
@@ -120,7 +120,7 @@ module.exports = {
       .then((result) => {
         if (result.length === 0) {
           // if order not found
-          return res.status(Http.StatusCodes.NOT_FOUND).json(req.t("notFound")); // return not found
+          return res.status(Http.StatusCodes.OK).json({ orders: result }); // return empty array
         }
         const allOrders = filterOrders(result, lang); // filter order
         return res.status(Http.StatusCodes.OK).json(allOrders); // return order
